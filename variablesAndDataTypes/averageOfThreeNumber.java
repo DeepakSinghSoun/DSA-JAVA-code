@@ -2,7 +2,7 @@ import java.util.*;
 
 // Average of 3 Number
 
-public class averageofThreeNumber {
+public class averageOfThreeNumber {
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
