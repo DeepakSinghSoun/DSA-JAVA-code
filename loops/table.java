@@ -15,6 +15,7 @@ public class table {
         for (int i = 1; i <= total; i++){
             int table = num * i;
             System.out.println(num + " * " + i + " = " + table );
-        } 
+        }
+        sc.close();
     }
 }

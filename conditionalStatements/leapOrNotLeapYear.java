@@ -31,5 +31,6 @@ public class leapOrNotLeapYear {
         }else {
             System.out.print(year + " is not a leap Year");
         }
+        sc.close();
     }
 }

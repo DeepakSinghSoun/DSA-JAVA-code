@@ -27,5 +27,6 @@ public class billOfItems {
         System.out.println("Total Item Bill is :" + totalBill);
 
         System.out.println("Bill with 18% tax : "+ taxBill);
+        sc.close();
     }
 }

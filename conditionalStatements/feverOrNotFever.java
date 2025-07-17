@@ -12,5 +12,6 @@ public class feverOrNotFever {
         }else {
             System.out.print("You don't have a fever");
         }
+        sc.close();
     }
 }

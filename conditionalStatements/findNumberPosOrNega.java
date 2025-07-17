@@ -13,5 +13,6 @@ public class findNumberPosOrNega {
         }else {
             System.out.print("This number is Negative : "+ num);
         }
+        sc.close();
     }
 }

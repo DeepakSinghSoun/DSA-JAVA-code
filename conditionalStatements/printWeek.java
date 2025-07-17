@@ -27,6 +27,6 @@ public class printWeek {
             default:
                     System.out.print("Incalid input! Please enter week number between 1 - 7");
         }
-
+        sc.close();
     }
 }
