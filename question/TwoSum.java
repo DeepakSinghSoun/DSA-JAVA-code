@@ -5,7 +5,7 @@ import java.util.*;
 
 // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
-public class Lc_E_twoSum {
+public class TwoSum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter your Target number : ");

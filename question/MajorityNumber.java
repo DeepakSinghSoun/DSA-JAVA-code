@@ -4,7 +4,7 @@ package question;
 
 // find the majority element in the array
 
-public class Lc_E_majorityNumber {
+public class MajorityNumber {
     public static void main(String[] args) {
         int arr[] = {2, 2, 1, 1, 1, 2, 2};
         int n = arr.length;

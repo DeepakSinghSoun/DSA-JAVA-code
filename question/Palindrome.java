@@ -5,7 +5,7 @@ import java.util.*;
 
 //find palindrome or not
 
-public class Lc_E_palindrome {
+public class Palindrome {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter your number : ");
