@@ -1,6 +1,6 @@
 package linkList;
 
-public class addfirst {
+public class addFirst {
 
     // create the Node class
     class Node {
@@ -42,7 +42,7 @@ public class addfirst {
     }
 
     public static void main(String[] args) {
-        addfirst list = new addfirst();
+        addFirst list = new addFirst();
         list.addFirstList(4);
         list.addFirstList(3);
         list.addFirstList(2);

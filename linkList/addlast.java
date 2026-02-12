@@ -1,6 +1,6 @@
 package linkList;
 
-public class addlast {
+public class addLast {
 
     class Node {
         int data;
@@ -37,7 +37,7 @@ public class addlast {
     }
 
     public static void main(String[] args) {
-        addlast list = new addlast();
+        addLast list = new addLast();
         list.addLastList(1);
         list.addLastList(2);
         list.addLastList(3);
