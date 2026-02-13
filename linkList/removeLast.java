@@ -1,7 +1,6 @@
 package linkList;
 
-public class removeFirst {
-
+public class removeLast {
     class Node {
         int data;
         Node next;
@@ -16,23 +15,10 @@ public class removeFirst {
     public Node tell;
     public int size;
 
-    public void addFrstNode(int data) {
-        Node newNode = new Node(data);
-        size++;
-        if (head == null) {
-            head = tell = newNode;
-            return;
-        }
-
-        newNode.next = head;
-        head = newNode;
-    }
-
-    // rmeove the node in fist
-    public int removeFristNode() {
-
+    // remove the node in last
+    public int removeLastNode() {
         if (size == 0) {
-            System.out.print("List is Empty");
+            System.out.print("list is Emtpy");
             return Integer.MIN_VALUE;
         } else if (size == 1) {
             int val = head.data;
@@ -41,10 +27,28 @@ public class removeFirst {
             return val;
         }
 
-        int val = head.data;
-        head = head.next;
+        Node prev = head;
+        for (int i = 0; i < size - 2; i++) {
+            prev = prev.next;
+        }
+
+        int val = tell.data;
+        prev.next = null;
+        tell = prev;
         size--;
         return val;
+    }
+
+    public void addLastNode(int data) {
+        Node newNode = new Node(data);
+        size++;
+        if (head == null) {
+            head = tell = newNode;
+            return;
+        }
+
+        tell.next = newNode;
+        tell = newNode;
     }
 
     public void printList() {
@@ -57,17 +61,17 @@ public class removeFirst {
     }
 
     public static void main(String[] args) {
-        removeFirst list = new removeFirst();
+        removeLast list = new removeLast();
 
-        list.addFrstNode(5);
-        list.addFrstNode(4);
-        list.addFrstNode(3);
-        list.addFrstNode(2);
-        list.addFrstNode(1);
+        list.addLastNode(1);
+        list.addLastNode(2);
+        list.addLastNode(3);
+        list.addLastNode(4);
+        list.addLastNode(5);
 
         list.printList();
 
-        list.removeFristNode();
+        list.removeLastNode();
         list.printList();
     }
 }
