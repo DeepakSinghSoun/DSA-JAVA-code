@@ -1,7 +1,6 @@
 package linkList;
 
-public class removeFirst {
-
+public class reverseList {
     class Node {
         int data;
         Node next;
@@ -16,7 +15,7 @@ public class removeFirst {
     public Node tail;
     public int size;
 
-    public void addFrstNode(int data) {
+    public void addFistNode(int data) {
         Node newNode = new Node(data);
         size++;
         if (head == null) {
@@ -28,23 +27,18 @@ public class removeFirst {
         head = newNode;
     }
 
-    // rmeove the node in fist
-    public int removeFristNode() {
+    public void reverse() {
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
 
-        if (size == 0) {
-            System.out.print("List is Empty");
-            return Integer.MIN_VALUE;
-        } else if (size == 1) {
-            int val = head.data;
-            head = tail = null;
-            size = 0;
-            return val;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
         }
-
-        int val = head.data;
-        head = head.next;
-        size--;
-        return val;
+        head = prev;
     }
 
     public void printList() {
@@ -57,17 +51,15 @@ public class removeFirst {
     }
 
     public static void main(String[] args) {
-        removeFirst list = new removeFirst();
-
-        list.addFrstNode(5);
-        list.addFrstNode(4);
-        list.addFrstNode(3);
-        list.addFrstNode(2);
-        list.addFrstNode(1);
+        reverseList list = new reverseList();
+        list.addFistNode(5);
+        list.addFistNode(4);
+        list.addFistNode(3);
+        list.addFistNode(2);
+        list.addFistNode(1);
 
         list.printList();
-
-        list.removeFristNode();
+        list.reverse();
         list.printList();
     }
 }

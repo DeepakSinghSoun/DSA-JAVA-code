@@ -1,6 +1,6 @@
 package linkList;
 
-public class removeLast {
+public class recusiveSearch {
     class Node {
         int data;
         Node next;
@@ -15,33 +15,8 @@ public class removeLast {
     public Node tail;
     public int size;
 
-    // remove the node in last
-    public int removeLastNode() {
-        if (size == 0) {
-            System.out.print("list is Emtpy");
-            return Integer.MIN_VALUE;
-        } else if (size == 1) {
-            int val = head.data;
-            head = tail = null;
-            size = 0;
-            return val;
-        }
-
-        Node prev = head;
-        for (int i = 0; i < size - 2; i++) {
-            prev = prev.next;
-        }
-
-        int val = tail.data;
-        prev.next = null;
-        tail = prev;
-        size--;
-        return val;
-    }
-
     public void addLastNode(int data) {
         Node newNode = new Node(data);
-        size++;
         if (head == null) {
             head = tail = newNode;
             return;
@@ -51,18 +26,39 @@ public class removeLast {
         tail = newNode;
     }
 
+    public int helper(Node head, int key) {
+        if (head == null) {
+            return -1;
+        }
+
+        if (head.data == key) {
+            return 0;
+        }
+
+        int idx = helper(head.next, key);
+        if (idx == -1) {
+            return -1;
+        }
+
+        return idx + 1;
+    }
+
+    public int searchRecusive(int key) {
+        return helper(head, key);
+    }
+
     public void printList() {
         Node temp = head;
         while (temp != null) {
             System.out.print(temp.data + " --> ");
             temp = temp.next;
         }
+
         System.out.println("null");
     }
 
-    public static void main(String[] args) {
-        removeLast list = new removeLast();
-
+    public static void main(String[] agrs) {
+        recusiveSearch list = new recusiveSearch();
         list.addLastNode(1);
         list.addLastNode(2);
         list.addLastNode(3);
@@ -71,7 +67,6 @@ public class removeLast {
 
         list.printList();
 
-        list.removeLastNode();
-        list.printList();
+        System.out.println(list.searchRecusive(4));
     }
 }

@@ -13,17 +13,17 @@ public class addLast {
     }
 
     public Node head;
-    public Node tell;
+    public Node tail;
 
     public void addLastList(int data) {
         Node newNode = new Node(data);
-        if (tell == null) {
-            head = tell = newNode;
+        if (tail == null) {
+            head = tail = newNode;
             return;
         }
 
-        tell.next = newNode;
-        tell = newNode;
+        tail.next = newNode;
+        tail = newNode;
     }
 
     public void printlist() {

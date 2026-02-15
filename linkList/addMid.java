@@ -14,12 +14,12 @@ public class addMid {
     }
 
     public Node head;
-    public Node tell;
+    public Node tail;
 
     public void addFistList(int data) {
         Node newNode = new Node(data);
         if (head == null) {
-            head = tell = newNode;
+            head = tail = newNode;
             return;
         }
 

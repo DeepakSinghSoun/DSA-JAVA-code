@@ -13,16 +13,16 @@ public class addFirst {
         }
     }
 
-    // create the Head and tell
+    // create the Head and tail
     public Node head;
-    public Node tell;
+    public Node tail;
 
     // create the add fist list function
     public void addFirstList(int data) {
         Node newNode = new Node(data);
 
         if (head == null) {
-            head = tell = newNode;
+            head = tail = newNode;
             return;
         }
 
