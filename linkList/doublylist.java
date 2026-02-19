@@ -1,72 +1,69 @@
 package linkList;
 
-public class removeFirst {
+public class doublylist {
 
-    class Node {
+    public class Node {
         int data;
         Node next;
+        Node prev;
 
         public Node(int data) {
             this.data = data;
             this.next = null;
+            this.prev = null;
         }
     }
 
     public Node head;
     public Node tail;
-    public int size;
 
-    public void addFrstNode(int data) {
+    // adding the new Node in list
+    public void addFirst(int data) {
         Node newNode = new Node(data);
-        size++;
         if (head == null) {
             head = tail = newNode;
             return;
         }
-
         newNode.next = head;
+        head.prev = newNode;
         head = newNode;
     }
 
-    // rmeove the node in fist
-    public int removeFristNode() {
-
-        if (size == 0) {
+    public int removeFist() {
+        if (head == null) {
             System.out.print("List is Empty");
             return Integer.MIN_VALUE;
-        } else if (size == 1) {
+        } else if (head.next == null) {
             int val = head.data;
             head = tail = null;
-            size = 0;
             return val;
         }
-
         int val = head.data;
         head = head.next;
+        head.prev = null;
         return val;
     }
 
+    // print the list
     public void printList() {
         Node temp = head;
         while (temp != null) {
-            System.out.print(temp.data + " --> ");
+            System.out.print(temp.data + " <--> ");
             temp = temp.next;
         }
         System.out.println("null");
     }
 
     public static void main(String[] args) {
-        removeFirst list = new removeFirst();
+        doublylist dList = new doublylist();
+        dList.addFirst(5);
+        dList.addFirst(4);
+        dList.addFirst(3);
+        dList.addFirst(2);
+        dList.addFirst(1);
 
-        list.addFrstNode(5);
-        list.addFrstNode(4);
-        list.addFrstNode(3);
-        list.addFrstNode(2);
-        list.addFrstNode(1);
-
-        list.printList();
-
-        list.removeFristNode();
-        list.printList();
+        dList.printList();
+        dList.removeFist();
+        dList.printList();
     }
 }
