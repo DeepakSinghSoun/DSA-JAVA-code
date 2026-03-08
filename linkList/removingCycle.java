@@ -1,7 +1,5 @@
 package linkList;
 
-import org.w3c.dom.Node;
-
 public class removingCycle {
     class Node {
         int data;

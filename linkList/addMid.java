@@ -1,7 +1,5 @@
 package linkList;
 
-import org.w3c.dom.Node;
-
 public class addMid {
     class Node {
         int data;
