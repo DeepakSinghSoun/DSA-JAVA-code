@@ -1,6 +1,6 @@
 package linkList;
 
-public class detectiongCycle {
+public class detectingCycle {
     class Node {
         int data;
         Node next;
@@ -31,7 +31,7 @@ public class detectiongCycle {
     }
 
     public static void main(String[] args) {
-        detectiongCycle list = new detectiongCycle();
+        detectingCycle list = new detectingCycle();
 
         list.head = list.new Node(1);
         list.head.next = list.new Node(2);

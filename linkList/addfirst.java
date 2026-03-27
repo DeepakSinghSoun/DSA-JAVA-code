@@ -2,7 +2,6 @@ package linkList;
 
 public class addFirst {
 
-    // create the Node class
     class Node {
         int data;
         Node next;
@@ -13,11 +12,9 @@ public class addFirst {
         }
     }
 
-    // create the Head and tail
     public Node head;
     public Node tail;
 
-    // create the add fist list function
     public void addFirstList(int data) {
         Node newNode = new Node(data);
 
@@ -30,7 +27,6 @@ public class addFirst {
         head = newNode;
     }
 
-    // create the print function
     public void printlist() {
 
         Node temp = head;
