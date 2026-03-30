@@ -2,7 +2,7 @@ package greedy;
 
 import java.util.*;
 
-public class fractionalKnapsack {
+public class FractionalKnapsack {
     public static void main(String[] args) {
         int[] val = { 60, 100, 120 };
         int[] weight = { 10, 20, 30 };
