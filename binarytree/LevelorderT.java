@@ -36,7 +36,28 @@ public class LevelorderT {
                 return;
             }
 
+            Queue<Node> q = new LinkedList<>();
+            q.add(root);
+            q.add(null);
 
+            while(!q.isEmpty()){
+                Node currNode = q.remove();
+                if(currNode == null){
+                    if(q.isEmpty()){
+                        break;
+                    }else{
+                        q.add(null);
+                    }
+                }else{
+                    System.out.print(currNode.val + " ");
+                    if(currNode.left != null){
+                        q.add(currNode.left);
+                    }
+                    if(currNode.right != null){
+                        q.add(currNode.right);
+                    }
+                }
+            }
         }
     }
 
@@ -50,8 +71,6 @@ public class LevelorderT {
         BinaryTree tree = new BinaryTree();
 
         Node root = tree.buildTree(nodes);
-
-        System.out.println(root.val);
 
         tree.levelorder(root);
     }
