@@ -1,7 +1,5 @@
 package binarytree;
 
-import java.util.*;
-
 public class DiameterTree2 {
     static class Node {
         int val;
