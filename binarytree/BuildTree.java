@@ -25,7 +25,6 @@ public class BuildTree {
             }
 
             Node newNode = new Node(nodes[idx]);
-
             newNode.left = buildTree(nodes);
             newNode.right = buildTree(nodes);
 
