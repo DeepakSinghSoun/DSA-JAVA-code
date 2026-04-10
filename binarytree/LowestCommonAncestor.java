@@ -1,6 +1,6 @@
 package binarytree;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class LowestCommonAncestor {
     static class Node {
