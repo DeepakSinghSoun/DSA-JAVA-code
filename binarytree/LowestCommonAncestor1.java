@@ -1,7 +1,5 @@
 package binarytree;
 
-import java.util.*;
-
 public class LowestCommonAncestor1 {
     static class Node {
         int val;
