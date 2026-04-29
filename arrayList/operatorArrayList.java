@@ -1,5 +1,3 @@
-package arrayList;
-
 import java.util.*;
 
 public class operatorArrayList {
